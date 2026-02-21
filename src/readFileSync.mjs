@@ -21,7 +21,7 @@ try {
   // so we need to convert it to string using toString() method or by passing "utf8" as the second argument.
 
   console.log("File reading completed.")
-  const lines = data.split("\n").filter((line) => line.trim() !== "")
+  const lines = data.split(/\r?\n/).filter((line) => line.trim() !== "")
   console.log("Number of lines:", lines.length)
   console.log("First line:", lines[0])
 } catch (err) {
